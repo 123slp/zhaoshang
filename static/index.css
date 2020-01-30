@@ -39,6 +39,7 @@ input[type="radio"]{
     line-height: 1rem;
     height: 1rem;
     padding: 0.1rem;
+    border: 1px solid #ccc;
     outline: none;
     resize: none;
 }
@@ -49,5 +50,4 @@ input[type="radio"]{
     margin: 1rem auto;
     line-height: 36px;
     color: #fff;
-    background: blue;
 }
