@@ -32,21 +32,25 @@
         </div>
         <input class="button_login" type="button" value="登录" id="bt-login" />
     </div>
+    <canvas id="canvas"></canvas>
 </body>
 </html>
 <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
 <script src="../static/js/vodify.js"></script>
 <script>
+    var code;
+    $('#myCanvas').click(function () {
+    createCode()
+    })
+    createCode()
     var submit = $('#bt-login')
     submit.click(function () {
         var user = $('.user').val()
         var password = $('.password').val()
-        if (user != '' && password != '') {
+        var inputCode= $('.verification_input').val()
+        if (user && password&&inputCode&&inputCode.toUpperCase()===code.toUpperCase()){
         // 这里写提交请求
         }
     })
-    $('#myCanvas').click(function () {
-        createCode()
-    })
-    createCode()
+
 </script>

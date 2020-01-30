@@ -1,9 +1,9 @@
-let code; var canvas;
+var code; var canvas;
 // 生成一个随机色
 function randomColor(min, max) {
-    let r = randomNum(min, max);
-    let g = randomNum(min, max);
-    let b = randomNum(min, max);
+    var r = randomNum(min, max);
+    var g = randomNum(min, max);
+    var b = randomNum(min, max);
     return 'rgb(' + r + ',' + g + ',' + b + ')';
 }
 
@@ -15,11 +15,11 @@ function randomNum(min, max) {
 function createCode() {
     code = '';
     //验证码的长度
-    let codeLength = 4;
+    var codeLength = 4;
     canvas = document.getElementById("myCanvas");
-    const codeChars = [];
+    var codeChars = [];
     // 验证码所需数字和字母的集合
-    for (let i = 0; i < 26; i++) {
+    for (var i = 0; i < 26; i++) {
         if (i < 10) {
             codeChars.push(String.fromCharCode(i + 48));
         }
@@ -27,8 +27,8 @@ function createCode() {
         codeChars.push(String.fromCharCode(i + 65));
     }
     // 组合数字和字母
-    for (let i = 0; i < codeLength; i++) {
-        let charNum = Math.floor(Math.random() * 52);
+    for (var i = 0; i < codeLength; i++) {
+        var charNum = Math.floor(Math.random() * 52);
         code += codeChars[charNum];
     }
     if (canvas) {
@@ -40,20 +40,19 @@ function createCode() {
 // 绘制验证码图形
 function drawVerify(value) {
     console.log(value)
-    const [ctx, width, height] = [canvas.getContext('2d'), canvas.width, canvas.height];
+    var [ctx, width, height] = [canvas.getContext('2d'), canvas.width, canvas.height];
 
     // 清空画布
-    ctx.clearRect(0, 0, width, height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     // 绘制背景色
-    ctx.fillStyle = randomColor(180, 240);
     ctx.fillRect(0, 0, width, height);
+    ctx.fillStyle = randomColor(50, 160);
     // 填充字体
-    ctx.font = '48px serif';
-    ctx.fillText(value, 0, 0);
+    ctx.font = '60px Arial';
+    ctx.fillText(value, 50, 100);
     // 绘制干扰线
     for (var i = 0; i < 2; i++) {
         ctx.strokeStyle = randomColor(40, 180);
-        
         ctx.beginPath();
         ctx.moveTo(randomNum(0, width), randomNum(0, height));
         ctx.lineTo(randomNum(0, width), randomNum(0, height));
