@@ -1,6 +1,6 @@
 @charset "utf-8";
 .history_box {
-    padding: 0.5rem;
+    padding: 0 0.5rem 0.5rem 0.5rem;
 }
 .history_box .button_login {
     display: block;
@@ -12,10 +12,10 @@
 }
 .single{
     width: 100%;
-    margin-top: 0.5rem;
     font-size: 0.5rem;
     display: flex;
     justify-content: space-around;
+    margin-top: 0.5rem;
 }
 .single li{
     width: 20%;
