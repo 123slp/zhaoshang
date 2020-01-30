@@ -6,72 +6,77 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../static/base.css">
+    <link rel="stylesheet" href="../static/index.css">
 </head>
 <body>
     <div class="main">
-        <div class="common">
-            <p>是否确证：</p>
-            <div class="quetion_one">
+        <div class="box">
+            <p>是否确诊：</p>
+            <div class="quetion_one common">
                 <label>
                     <input type="radio" name="quetion_one" value="1">
-                    是 yes
+                    <span>是 yes</span>
                 </label>
                 <label>
                     <input type="radio" name="quetion_one" value="2" checked>
-                    否 no
+                    <span>否 no</span>
                 </label>
             </div>
         </div>
-        <div class="common">
+        <div class="box">
             <p>是否疑是：</p>
-            <div class="quetion_two">
+            <div class="quetion_two common">
                   <label>
                       <input type="radio" name="quetion_two" value="1">
-                      是 yes
+                      <span>是 yes</span>
                   </label>
                   <label>
                       <input type="radio" name="quetion_two" value="2" checked>
-                      否 no
+                      <span>否 no</span>
                   </label>
             </div>
         </div>
-        <div class="common">
+        <div class="box">
             <p>是否密切接触：</p>
-            <div class="quetion_three"> 
+            <div class="quetion_three common">
                 <label>
                     <input type="radio" name="quetion_three" value="1">
-                    是 yes
+                    <span>是 yes</span>
                 </label>
                 <label>
                     <input type="radio" name="quetion_three" value="2" checked>
-                    否 no
+                    <span>否 no</span>
                 </label>
             </div>
         </div>
-        <div class="common">
+        <div class="box">
             <p>是否隔离人员：</p>
-            <div class="quetion_four">
+            <div class="quetion_four common">
                 <label>
                     <input type="radio" name="quetion_four" value="1">
-                    是 yes
+                    <span>是 yes</span>
                 </label>
                 <label>
                     <input type="radio" name="quetion_four" value="2" checked>
-                    否 no
+                    <span>否 no</span>
                 </label>
             </div>
         </div>
-        <div class="common">
-            <p>备注：</p>
-            <input type="textarea">
+        <div class="box last">
+            <p><span>备注：</span>
+                <textarea>
+                </textarea>
+            </p>
+            
         </div>
-        <input class="button_login" type="button" value="上报" id="bt-login" />
+        <input class="button_login" type="button" value="上报" id="submit-login" />
+        
     </div>
 </body>
 </html>
 <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
 <script>
-var quetion_one,quetion_two,quetion_three,quetion_four;
+var quetion_one=quetion_two=quetion_three=quetion_four='2';
 $(".quetion_one").click(function() {
     var e = event || window.event;
     if (e.target && e.target.nodeName.toUpperCase() == "INPUT") {
@@ -96,5 +101,7 @@ $(".quetion_four").click(function() {
         quetion_four = e.target.value
     }
 });
-
+$('#submit-login').click(function () {
+    // 上报提交
+})
 </script>
