@@ -5,15 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>用户登陆</title>
-    <style>
-        *{
-            margin: 0;padding: 0;
-        }
-        html,body{
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js"></script>
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
     <link rel="stylesheet" href="../static/base.css">
     <link rel="stylesheet" href="../static/login.css">
     
@@ -35,6 +28,7 @@
     <canvas id="canvas"></canvas>
 </body>
 </html>
+<script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.2.1/weui.min.js"></script>
 <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
 <script src="../static/js/vodify.js"></script>
 <script>
@@ -50,6 +44,7 @@
         var inputCode= $('.verification_input').val()
         if (user && password&&inputCode&&inputCode.toUpperCase()===code.toUpperCase()){
         // 这里写提交请求
+        window.location.href='index.html'
         }
     })
 

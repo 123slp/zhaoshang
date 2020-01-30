@@ -1,24 +1,24 @@
 @charset "utf-8";
-.detail{
-    padding: 1rem;
+.history_box {
+    padding: 0.5rem;
 }
-.detail .button_login{
+.history_box .button_login {
     display: block;
-    width: 4rem;
+    width: 1rem;
     border-radius: 2px;
-    line-height: 36px;
+    line-height: 1rem;
     color: #fff;
     background: blue;
 }
 .single{
     width: 100%;
-    margin-top: 1rem;
-    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.5rem;
     display: flex;
     justify-content: space-around;
 }
 .single li{
     width: 20%;
     text-align: center;
-    line-height: 2.5rem;
+    line-height: 1rem;
 }

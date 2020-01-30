@@ -5,75 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js"></script>
     <link rel="stylesheet" href="../static/base.css">
     <link rel="stylesheet" href="../static/index.css">
+    <link rel="stylesheet" href="../static/detail.css">
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
 </head>
 <body>
-    <div class="main">
-        <div class="box">
-            <p>是否确诊：</p>
-            <div class="quetion_one common">
-                <label>
-                    <input type="radio" name="quetion_one" value="1">
-                    <span>是 yes</span>
-                </label>
-                <label>
-                    <input type="radio" name="quetion_one" value="2" checked>
-                    <span>否 no</span>
-                </label>
-            </div>
+    <div class="weui-tab" id="tab">
+        <div class="weui-navbar">
+            <div class="weui-navbar__item">上报</div>
+            <div class="weui-navbar__item">上报历史</div>
         </div>
-        <div class="box">
-            <p>是否疑是：</p>
-            <div class="quetion_two common">
-                  <label>
-                      <input type="radio" name="quetion_two" value="1">
-                      <span>是 yes</span>
-                  </label>
-                  <label>
-                      <input type="radio" name="quetion_two" value="2" checked>
-                      <span>否 no</span>
-                  </label>
-            </div>
-        </div>
-        <div class="box">
-            <p>是否密切接触：</p>
-            <div class="quetion_three common">
-                <label>
-                    <input type="radio" name="quetion_three" value="1">
-                    <span>是 yes</span>
-                </label>
-                <label>
-                    <input type="radio" name="quetion_three" value="2" checked>
-                    <span>否 no</span>
-                </label>
-            </div>
-        </div>
-        <div class="box">
-            <p>是否隔离人员：</p>
-            <div class="quetion_four common">
-                <label>
-                    <input type="radio" name="quetion_four" value="1">
-                    <span>是 yes</span>
-                </label>
-                <label>
-                    <input type="radio" name="quetion_four" value="2" checked>
-                    <span>否 no</span>
-                </label>
-            </div>
-        </div>
-        <div class="box last">
-            <p><span>备注：</span>
-                <textarea>
+         <div class="weui-tab__panel">
+             <div class="weui-tab__content">
+                  <div class="main">
+                      <div class="box">
+                          <p>是否确诊：</p>
+                          <div class="quetion_one common">
+                              <label>
+                                  <input type="radio" name="quetion_one" value="1">
+                                  <span>是 yes</span>
+                              </label>
+                              <label>
+                                  <input type="radio" name="quetion_one" value="2" checked>
+                                  <span>否 no</span>
+                              </label>
+                          </div>
+                      </div>
+                      <div class="box">
+                          <p>是否疑是：</p>
+                          <div class="quetion_two common">
+                              <label>
+                                  <input type="radio" name="quetion_two" value="1">
+                                  <span>是 yes</span>
+                              </label>
+                              <label>
+                                  <input type="radio" name="quetion_two" value="2" checked>
+                                  <span>否 no</span>
+                              </label>
+                          </div>
+                      </div>
+                      <div class="box">
+                          <p>是否密切接触：</p>
+                          <div class="quetion_three common">
+                              <label>
+                                  <input type="radio" name="quetion_three" value="1">
+                                  <span>是 yes</span>
+                              </label>
+                              <label>
+                                  <input type="radio" name="quetion_three" value="2" checked>
+                                  <span>否 no</span>
+                              </label>
+                          </div>
+                      </div>
+                      <div class="box">
+                          <p>是否隔离人员：</p>
+                          <div class="quetion_four common">
+                              <label>
+                                  <input type="radio" name="quetion_four" value="1">
+                                  <span>是 yes</span>
+                              </label>
+                              <label>
+                                  <input type="radio" name="quetion_four" value="2" checked>
+                                  <span>否 no</span>
+                              </label>
+                          </div>
+                      </div>
+                      <div class="box last">
+                          <p><span>备注：</span>
+                              <textarea>
                 </textarea>
-            </p>
-            
-        </div>
-        <input class="button_login" type="button" value="上报" id="submit-login" />
-        
+                          </p>
+
+                      </div>
+                      <input class="button_login" type="button" value="上报" id="submit-login" />
+
+                  </div>
+             </div>
+             <div class="weui-tab__content">
+                  <div class="history_box">
+                      <div class="single">
+                          <li>确诊</li>
+                          <li>疑是</li>
+                          <li>接触</li>
+                          <li>隔离</li>
+                          <li>编号</li>
+                      </div>
+                      <div class="tbody">
+                          <div class="single">
+                              <li>确诊</li>
+                              <li>疑是</li>
+                              <li>接触</li>
+                              <li>隔离</li>
+                              <li>编号</li>
+                          </div>
+                      </div>
+                  </ul>
+             </div>
+         </div>
     </div>
 </body>
 </html>
+<script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.2.1/weui.min.js"></script>
 <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
 <script>
 var quetion_one=quetion_two=quetion_three=quetion_four='2';
@@ -103,5 +137,43 @@ $(".quetion_four").click(function() {
 });
 $('#submit-login').click(function () {
     // 上报提交
-})
+    weui.toast('上报成功', 3000);
+}) 
 </script>
+<script>
+    var data = [{
+        name: "1",
+        age: '2',
+        height: "3",
+        sex: "4",
+        code: 5
+    }]
+
+    function insert() {
+        var parent = $('.history_box')
+        var table = $("<div class='tbody'></div>");
+        table.appendTo(parent)
+        for (var i = 0; i < data.length; i++) {
+            var html = $("<div class='single'></div>");
+            html.append("<li> " + data[i].height + "</li>");
+            html.append("<li> " + data[i].name + "</li>");
+            html.append("<li> " + data[i].sex + "</li>");
+            html.append("<li> " + data[i].age + "</li>");
+            html.append("<li> " + data[i].code + "</li>");
+            html.appendTo(table);
+        }
+        
+    }
+    
+</script>
+<script>
+weui.tab('#tab',{
+defaultIndex: 0,
+onChange: function(index){
+console.log(index);
+if(index === 1){
+    $(".tbody").remove();
+    insert()
+}
+}
+});</script>
