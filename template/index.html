@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/base.css">
+</head>
+<body>
+    <div class="main">
+        <div class="common">
+            <p>是否确证：</p>
+            <div class="quetion_one">
+                <label>
+                    <input type="radio" name="quetion_one" value="1">
+                    是 yes
+                </label>
+                <label>
+                    <input type="radio" name="quetion_one" value="2" checked>
+                    否 no
+                </label>
+            </div>
+        </div>
+        <div class="common">
+            <p>是否疑是：</p>
+            <div class="quetion_two">
+                  <label>
+                      <input type="radio" name="quetion_two" value="1">
+                      是 yes
+                  </label>
+                  <label>
+                      <input type="radio" name="quetion_two" value="2" checked>
+                      否 no
+                  </label>
+            </div>
+        </div>
+        <div class="common">
+            <p>是否密切接触：</p>
+            <div class="quetion_three"> 
+                <label>
+                    <input type="radio" name="quetion_three" value="1">
+                    是 yes
+                </label>
+                <label>
+                    <input type="radio" name="quetion_three" value="2" checked>
+                    否 no
+                </label>
+            </div>
+        </div>
+        <div class="common">
+            <p>是否隔离人员：</p>
+            <div class="quetion_four">
+                <label>
+                    <input type="radio" name="quetion_four" value="1">
+                    是 yes
+                </label>
+                <label>
+                    <input type="radio" name="quetion_four" value="2" checked>
+                    否 no
+                </label>
+            </div>
+        </div>
+        <div class="common">
+            <p>备注：</p>
+            <input type="textarea">
+        </div>
+        <input class="button_login" type="button" value="上报" id="bt-login" />
+    </div>
+</body>
+</html>
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+<script>
+var quetion_one,quetion_two,quetion_three,quetion_four;
+$(".quetion_one").click(function() {
+    var e = event || window.event;
+    if (e.target && e.target.nodeName.toUpperCase() == "INPUT") {
+        quetion_one = e.target.value
+    }
+});
+$(".quetion_two").click(function() {
+    var e = event || window.event;
+    if (e.target && e.target.nodeName.toUpperCase() == "INPUT") {   
+        quetion_two = e.target.value
+    }
+});
+$(".quetion_three").click(function() {
+    var e = event || window.event;
+    if (e.target && e.target.nodeName.toUpperCase() == "INPUT") {     
+        quetion_three = e.target.value
+    }
+});
+$(".quetion_four").click(function() {
+    var e = event || window.event;
+    if (e.target && e.target.nodeName.toUpperCase() == "INPUT") {        
+        quetion_four = e.target.value
+    }
+});
+
+</script>

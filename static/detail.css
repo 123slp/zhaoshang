@@ -1,0 +1,9 @@
+@charset "utf-8";
+.single{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.single li{
+    
+}

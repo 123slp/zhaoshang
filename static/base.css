@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+/*通用*/
+html,body {
+    font: 12px "simhei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    background-color: #f1f3f4;
+    height: 100%;
+    width: 100%;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+input:focus {
+    outline: 0;
+}
+
+#nav a {
+    color: #cccccc;
+}
+
+#nav a:hover {
+    color: #b8b8b8;
+}
+
+#nav a:focus {
+    color: #A07477;
+}
+
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+}
