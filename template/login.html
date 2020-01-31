@@ -2,14 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0,minimal-ui,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="m-mi-com">
     <title>用户登录</title>
-    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js"></script>
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.1.4/weui.min.css">
     <link rel="stylesheet" href="../static/base.css">
     <link rel="stylesheet" href="../static/login.css">
-    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
-    
+    <script src="../static/js/flexiable.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.2.1/weui.min.js"></script>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../static/js/vodify.js"></script>       
 </head>
 <body>
     <div class="login">
@@ -43,28 +49,44 @@
                 <a href="javascript:;" class="weui-btn weui-btn_primary" id="bt-login">登录</a>
             </div>
     </div>
-    <canvas id="canvas"></canvas>
 </body>
+<!-- loading toast -->
+<div id="loadingToast" style="display:none;">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast">
+        <i class="weui-loading weui-icon_toast"></i>
+        <p class="weui-toast__content">数据加载中</p>
+    </div>
+</div>
 </html>
-<script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.2.1/weui.min.js"></script>
-<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
-<script src="../static/js/vodify.js"></script>
 <script>
     // var code;
     // $('#myCanvas').click(function () {
     // createCode()
     // })
     // createCode()
-    var submit = $('#bt-login')
-    submit.click(function () {
-        var user = $('#user_input').val()
-        var password = $('#pass_input').val()
-        // var inputCode= $('.verification_input').val()
+    $(function () {
+        var submit = $('#bt-login')
+        $('.js_dialog').on('click', '.weui-dialog__btn', function(){
+            $(this).parents('.js_dialog').fadeOut(200);
+        })        
+        submit.click(function () {
+            var user = $('#user_input').val()
+            var password = $('#pass_input').val()
+            // var inputCode= $('.verification_input').val()
+            if (!user) return weui.alert('请输入用户名')
+            if (!password) return weui.alert('请输入密码')
+            $('#loadingToast').fadeIn(200)
+
+            setTimeout(() => {
+                $('#loadingToast').fadeOut(200)
+                if (user && password){
+                    // 这里写提交请求
+                    window.location.href='index.html'
+                }               
+            }, 2000);
+        })
         
-        if (user && password){
-        // 这里写提交请求
-        window.location.href='index.html'
-        }
     })
 
 </script>

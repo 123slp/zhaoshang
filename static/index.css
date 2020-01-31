@@ -51,3 +51,29 @@ input[type="radio"]{
     line-height: 36px;
     color: #fff;
 }
+.radio_title{
+    line-height: 16px;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #888;
+}
+.weui-form__control-area{
+    margin: 16px 0;
+}
+.weui-form__control-area .weui-cells__title{
+    padding: 0;
+}
+.weui-form__control-area .weui-cell:before, .weui-form__control-area .weui-cells:before{
+    left: 0;
+    right: 0;
+}
+.weui-form__control-area .weui-cells:after{
+    left: 0;
+    right: 0; 
+}
+.weui-form__control-area .weui-cell{
+    padding: 8px;
+}
+.red{
+    color: #FA5151;
+}

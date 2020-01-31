@@ -52,3 +52,6 @@ dd {
 input {
     border: none;
 }
+.weui-check{
+    left: -9999rem;
+}
